@@ -26,8 +26,11 @@
                        
                           <% check += 1 %>
                             <p><%= "[質問文][#{@users[0].nickname}]message.content"%></p>
+                            <%= link_to @users[0].nickname, user_gifts_path(@users[0]) %>
                             <p><%= "[回答文][#{@users[1].nickname}]message.content"%></p>
+                            <%= link_to @users[1].nickname, user_gifts_path(@users[1]) %>
                             <p><%= "----------[#{@users[2].nickname}]message.content"%></p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
+                            <%= link_to @users[2].nickname, user_gifts_path(@users[2]) %>
                         </div>
                     </div>
                 </div>
