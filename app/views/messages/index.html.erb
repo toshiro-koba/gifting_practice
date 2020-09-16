@@ -25,14 +25,9 @@
                         <div class="question-contents">
                        
                           <% check += 1 %>
-                          
-                            <p>[質問文][nickname]message.content</p>
-                   
-                         
-                            <p>[回答文][nickname]message.content</p>
-                          
-                            <p>----------[nickname]message.content</p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
-
+                            <p><%= "[質問文][#{@users[0].nickname}]message.content"%></p>
+                            <p><%= "[回答文][#{@users[1].nickname}]message.content"%></p>
+                            <p><%= "----------[#{@users[2].nickname}]message.content"%></p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
                         </div>
                     </div>
                 </div>
