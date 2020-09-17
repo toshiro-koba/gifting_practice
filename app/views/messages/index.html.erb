@@ -21,16 +21,38 @@
                         <div class="question-title">
                           <p>question_title</p>
                         </div>
-                        <% check = 0 %>
+                
                         <div class="question-contents">
                        
-                          <% check += 1 %>
                             <p><%= "[質問文][#{@users[0].nickname}]message.content"%></p>
-                            <%= link_to @users[0].nickname, user_gifts_path(@users[0]) %>
+                            <%= link_to "#{@users[0].nickname}にギフトする", user_gifts_path(@users[0]) %>
+                            <a href="/users/<%= @users[0].id %>">
+                                <%= "#{@users[0].nickname}の詳細ページ" %>
+                            </a>
+
                             <p><%= "[回答文][#{@users[1].nickname}]message.content"%></p>
-                            <%= link_to @users[1].nickname, user_gifts_path(@users[1]) %>
+                            <%= link_to "#{@users[1].nickname}にギフトする", user_gifts_path(@users[1]) %>
+                            <a href="/users/<%= @users[1].id %>">
+                                <%= "#{@users[1].nickname}の詳細ページ" %>
+                            </a>
+
                             <p><%= "----------[#{@users[2].nickname}]message.content"%></p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
-                            <%= link_to @users[2].nickname, user_gifts_path(@users[2]) %>
+                            <%= link_to "#{@users[2].nickname}にギフトする", user_gifts_path(@users[2]) %>
+                            <a href="/users/<%= @users[2].id %>">
+                                <%= "#{@users[2].nickname}の詳細ページ" %>
+                            </a>
+
+                            <p><%= "----------[#{@users[3].nickname}]message.content"%></p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
+                            <%= link_to "#{@users[3].nickname}にギフトする", user_gifts_path(@users[3]) %>
+                            <a href="/users/<%= @users[3].id %>">
+                                <%= "#{@users[3].nickname}の詳細ページ" %>
+                            </a>
+
+                            <p><%= "----------[#{@users[4].nickname}]message.content"%></p> <%# 1つのルームにメッセージが3つ以上保存されてたら、3つ目以降も表示される！本番はいらないやつ！！！ %>
+                            <%= link_to "#{@users[4].nickname}にギフトする", user_gifts_path(@users[4]) %>
+                            <a href="/users/<%= @users[4].id %>">
+                                <%= "#{@users[4].nickname}の詳細ページ" %>
+                            </a>
                         </div>
                     </div>
                 </div>

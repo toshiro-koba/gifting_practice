@@ -11,9 +11,7 @@ class GiftsController < ApplicationController
   def create
     @reciver = User.find(params[:user_id])
     @gift = Gift.new(order_params)
-    binding.pry
     if @gift.valid?
-      binding.pry
       pay_item
       @gift.save
       return redirect_to root_path
