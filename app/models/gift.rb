@@ -4,4 +4,5 @@ class Gift < ApplicationRecord
 
   validates :user_id, presence: true
   validates :giver_id, presence: true
+  validates :price, presence: true
 end
